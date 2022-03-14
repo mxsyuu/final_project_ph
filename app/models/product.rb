@@ -5,6 +5,8 @@ class Product < ApplicationRecord
 
   # Validations
 
+  validates :brand, :presence => true
+
   validates :creator_id, :presence => true
 
   validates :ph_level, :numericality => { :less_than_or_equal_to => 12, :greater_than_or_equal_to => 2 }
