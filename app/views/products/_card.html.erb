@@ -6,59 +6,41 @@
   <div class="card-body">
     <dl class="mb-1">
       <dt>Brand</dt>
-      <!-- Display brand start -->
       <dd><%= product.brand %></dd>
-      <!-- Display brand end -->
 
       <dt>Product name</dt>
-      <!-- Display product_name start -->
       <dd><%= product.product_name %></dd>
-      <!-- Display product_name end -->
 
       <dt>Ph level</dt>
-      <!-- Display ph_level start -->
       <dd><%= product.ph_level %></dd>
-      <!-- Display ph_level end -->
 
       <dt>Description</dt>
-      <!-- Display description start -->
       <dd><%= product.description %></dd>
-      <!-- Display description end -->
 
       <dt>Purchase link</dt>
-      <!-- Display purchase_link start -->
       <dd><%= product.purchase_link %></dd>
-      <!-- Display purchase_link end -->
 
       <dt>Image</dt>
-      <!-- Display image start -->
       <dd>
         <%= cl_image_tag @product.image, class: "img-fluid" %>
       </dd>
-      <!-- Display image end -->
 
       <dt>Creator</dt>
-      <!-- Display creator_id start -->
       <dd>
         <% if @product.creator.present? %>
           <%= link_to product.creator, product.creator %>
         <% end %>
       </dd>
-      <!-- Display creator_id end -->
 
       <dt>Product type</dt>
-      <!-- Display product_type_id start -->
       <dd>
         <% if @product.product_type.present? %>
           <%= link_to product.product_type, product.product_type %>
         <% end %>
       </dd>
-      <!-- Display product_type_id end -->
 
       <dt>Validated by company</dt>
-      <!-- Display validated_by_company start -->
       <dd><%= product.validated_by_company %></dd>
-      <!-- Display validated_by_company end -->
 
     </dl>
 
@@ -67,21 +49,17 @@
         <%= link_to_show_or_back product, '<i class="fas fa-search-plus"></i>'.html_safe, '<i class="fas fa-chevron-left"></i>'.html_safe, class: "btn btn-block btn-outline-secondary" %>
       </div>
 
-      <!-- Edit link product start -->
       <div class="col">
         <%= link_to edit_product_url(product), class: "btn btn-block btn-outline-secondary" do %>
           <i class="fas fa-edit"></i>
         <% end %>
       </div>
-      <!-- Edit link product end -->
 
-      <!-- Delete link product start -->
       <div class="col">
         <%= link_to product, method: :delete, data: { confirm: "Do you really want to delete this product?" }, class: "btn btn-block btn-outline-secondary" do %>
           <i class="fas fa-trash-alt"></i>
         <% end %>
       </div>
-      <!-- Delete link product end -->
     </div>
   </div>
 

@@ -1,32 +1,18 @@
-<!-- Form bookmark start -->
 <%= form_with(model: @bookmark, local: true) do |f| %>
-<!-- Form bookmark end -->
 
-  <!-- Label and input for product_id start -->
   <div class="form-group">
     <%= f.label :product_id %>
 
-    <!-- Input for product_id start -->
     <%= f.collection_select :product_id, Product.all, :id, :to_s, {}, class: "form-control" %>
-    <!-- Input for product_id end -->
   </div>
-  <!-- Label and input for product_id end -->
 
-  <!-- Label and input for category_id start -->
   <div class="form-group">
     <%= f.label :category_id %>
 
-    <!-- Input for category_id start -->
     <%= f.text_field :category_id, class: "form-control" %>
-    <!-- Input for category_id end -->
   </div>
-  <!-- Label and input for category_id end -->
 
-  <!-- Label and input for user_id start -->
-  <!-- Input for user_id start -->
   <%= f.hidden_field :user_id, value: @user.id %>
-  <!-- Input for user_id end -->
-  <!-- Label and input for user_id end -->
 
   <%= f.submit "Create bookmark", class: "btn btn-block btn-outline-secondary" %>
 <% end %>
