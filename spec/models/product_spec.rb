@@ -19,8 +19,6 @@ RSpec.describe Product, type: :model do
       should validate_numericality_of(:ph_level).is_less_than(12).is_greater_than_or_equal_to(2)
     }
 
-    it { should validate_uniqueness_of(:product_name).scoped_to(:brand) }
-
     it { should validate_presence_of(:product_name) }
   end
 end
