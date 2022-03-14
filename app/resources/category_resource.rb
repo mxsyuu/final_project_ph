@@ -11,4 +11,12 @@ class CategoryResource < ApplicationResource
 
   # Indirect associations
 
+  has_many :bookmarks do
+    assign_each do |category, bookmarks|
+      bookmarks.select do |b|
+        b.id.in?(category.bookmarks.map(&:id))
+      end
+    end
+  end
+
 end
