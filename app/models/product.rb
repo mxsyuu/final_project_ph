@@ -7,9 +7,11 @@ class Product < ApplicationRecord
              dependent: :destroy
 
   belongs_to :product_type,
+             optional: true,
              class_name: "Category"
 
   belongs_to :creator,
+             optional: true,
              class_name: "User"
 
   # Indirect associations
@@ -21,8 +23,6 @@ class Product < ApplicationRecord
   validates :ph_level,
             numericality: { less_than_or_equal_to: 12,
                             greater_than_or_equal_to: 2 }
-
-  validates :product_name, uniqueness: { scope: [:brand] }
 
   validates :product_name, presence: true
 
