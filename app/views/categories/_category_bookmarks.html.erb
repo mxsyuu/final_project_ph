@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Bookmarks
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @category.bookmarks.each do |bookmark| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/bookmarks/<%= bookmark.id %>">
+          <%= bookmark %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>
