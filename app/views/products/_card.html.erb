@@ -39,12 +39,20 @@
 
       <dt>Creator</dt>
       <!-- Display creator_id start -->
-      <dd><%= product.creator_id %></dd>
+      <dd>
+        <% if @product.creator.present? %>
+          <%= link_to product.creator, product.creator %>
+        <% end %>
+      </dd>
       <!-- Display creator_id end -->
 
       <dt>Product type</dt>
       <!-- Display product_type_id start -->
-      <dd><%= product.product_type_id %></dd>
+      <dd>
+        <% if @product.product_type.present? %>
+          <%= link_to product.product_type, product.product_type %>
+        <% end %>
+      </dd>
       <!-- Display product_type_id end -->
 
       <dt>Validated by company</dt>
