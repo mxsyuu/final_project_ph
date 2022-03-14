@@ -14,6 +14,9 @@ class ProductResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :product_type,
+             resource: CategoryResource
+
   belongs_to :creator,
              resource: UserResource
 

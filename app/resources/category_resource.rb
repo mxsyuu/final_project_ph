@@ -6,6 +6,9 @@ class CategoryResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :products,
+             foreign_key: :product_type_id
+
   # Indirect associations
 
 end
