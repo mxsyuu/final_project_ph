@@ -1,6 +1,9 @@
 class Product < ApplicationRecord
   # Direct associations
 
+  belongs_to :product_type,
+             :class_name => "Category"
+
   belongs_to :creator,
              :class_name => "User"
 
