@@ -5,6 +5,8 @@ class Bookmark < ApplicationRecord
 
   # Validations
 
+  validates :category_id, :presence => true
+
   validates :product_id, :presence => true
 
   validates :user_id, :presence => true
