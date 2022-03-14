@@ -5,6 +5,8 @@ class Category < ApplicationRecord
 
   # Validations
 
+  validates :category_type, :uniqueness => true
+
   validates :category_type, :presence => true
 
   # Scopes
