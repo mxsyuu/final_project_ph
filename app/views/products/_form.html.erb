@@ -198,7 +198,7 @@
 
     <%= f.label :product_type_id %>
     <!-- Input for product_type_id start -->
-    <%= f.number_field :product_type_id, class: product_type_class, placeholder: "Enter product type" %>
+    <%= f.collection_select :product_type_id, Category.all, :id, :to_s, {}, class: "form-control" %>
     <!-- Input for product_type_id end -->
     <% if product_type_was_invalid %>
       <% product.errors.full_messages_for(:product_type).each do |message| %>
