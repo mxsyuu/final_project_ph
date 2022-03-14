@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
   # Validations
 
+  validates :password, presence: true
+
   # Scopes
 
   def to_s
