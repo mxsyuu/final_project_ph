@@ -7,6 +7,8 @@ class UserResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :bookmarks
+
   has_many   :links,
              resource: ProductResource,
              foreign_key: :creator_id
