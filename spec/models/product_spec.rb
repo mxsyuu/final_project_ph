@@ -4,6 +4,8 @@ RSpec.describe Product, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:bookmarks) }
+
     it { should belong_to(:product_type) }
 
     it { should belong_to(:creator) }
