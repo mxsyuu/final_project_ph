@@ -33,6 +33,6 @@ class Product < ApplicationRecord
   # Scopes
 
   def to_s
-    brand
+    product_name
   end
 end
