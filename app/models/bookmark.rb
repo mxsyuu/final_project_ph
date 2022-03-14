@@ -7,6 +7,10 @@ class Bookmark < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :product_type,
+             :through => :product,
+             :source => :product_type
+
   # Validations
 
   validates :category_id, :presence => true

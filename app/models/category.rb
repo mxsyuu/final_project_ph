@@ -7,6 +7,10 @@ class Category < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :bookmarks,
+             :through => :products,
+             :source => :bookmarks
+
   # Validations
 
   validates :category_type, :uniqueness => true
