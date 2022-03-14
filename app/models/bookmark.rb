@@ -8,21 +8,20 @@ class Bookmark < ApplicationRecord
   # Indirect associations
 
   has_one    :product_type,
-             :through => :product,
-             :source => :product_type
+             through: :product,
+             source: :product_type
 
   # Validations
 
-  validates :category_id, :presence => true
+  validates :category_id, presence: true
 
-  validates :product_id, :presence => true
+  validates :product_id, presence: true
 
-  validates :user_id, :presence => true
+  validates :user_id, presence: true
 
   # Scopes
 
   def to_s
     product.to_s
   end
-
 end

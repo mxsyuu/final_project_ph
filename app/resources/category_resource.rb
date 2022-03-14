@@ -18,5 +18,4 @@ class CategoryResource < ApplicationResource
       end
     end
   end
-
 end
