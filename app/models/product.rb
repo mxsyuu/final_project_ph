@@ -5,6 +5,8 @@ class Product < ApplicationRecord
 
   # Validations
 
+  validates :product_name, :presence => true
+
   validates :product_type_id, :presence => true
 
   # Scopes
