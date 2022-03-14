@@ -14,6 +14,8 @@ class ProductResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :bookmarks
+
   belongs_to :product_type,
              resource: CategoryResource
 
